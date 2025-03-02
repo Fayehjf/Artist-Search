@@ -67,9 +67,9 @@ The backend is deployed on Google Cloud Platform using App Engine. For deploymen
 1. Make sure you have the Google Cloud SDK installed and configured.
   
 2. In your project folder, deploy with:
-  ```bash
-  gcloud app deploy
-  ```
+   ```bash
+   gcloud app deploy
+   ```
 3. After deployment, the app is accessible at https://<your-project-id>.appspot.com/.
 
 
