@@ -43,10 +43,14 @@ This project implements a web application that allows users to search for artist
    python -m venv venv
    source venv/bin/activate   # On Windows: venv\Scripts\activate
    pip install -r requirements.txt
-  ```
+   ```
 
 3. Create a .env file in the project root with your Artsy credentials (for local development):
 
+   ```bash
+   ARTSY_CLIENT_ID=your_client_id_here
+   ARTSY_CLIENT_SECRET=your_client_secret_here
+   ```
 
 4. Run the Flask app locally:
    
