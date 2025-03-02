@@ -1,0 +1,7 @@
+runtime: python39
+entrypoint: gunicorn -b :$PORT app:app
+
+env_variables:
+  ARTSY_CLIENT_ID: "dcfe2d848259cc6351d2"
+  ARTSY_CLIENT_SECRET: "155bfc778263f2230d5b2b4e9084b04b"
+  FLASK_ENV: "production"

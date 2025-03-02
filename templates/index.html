@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-content">
+            <span class="app-name">Artist Search</span>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="search-section">
+            <div class="search-container">
+                <img class="search-icon" 
+                        src="{{ url_for('static', filename='images/search_icon.png') }}" 
+                        alt="Search icon"
+                        onclick="initiateSearch()">
+                <input type="text" 
+                        id="artistInput" 
+                        placeholder="Please enter an artist name."
+                        aria-label="Artist search"
+                        required>
+                <img class="clear-icon" 
+                        src="{{ url_for('static', filename='images/clear_icon.png') }}" 
+                        alt="Clear input"
+                        onclick="clearInput()">
+            </div>
+            <div id="searchLoader" class="loader-hidden">
+                <img src="{{ url_for('static', filename='images/loading.gif') }}" 
+                        alt="Loading...">
+            </div>
+        </div>
+
+        <div id="resultDisplay" class="results-hidden">
+            <div class="artist-cards-wrapper">
+                <div class="artist-cards" id="artistCards"></div>
+            </div>
+        </div>
+
+        <div id="detailLoader" class="loader-hidden">
+            <img src="{{ url_for('static', filename='images/loading.gif') }}" 
+                    alt="Loading details">
+        </div>
+
+        <div id="artistInfo" class="details-hidden"></div>
+    </div>
+
+    <footer>
+        <a href="https://www.artsy.net" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="credit-link">
+            <span class="credit-text">Powered by</span>
+            <img src="{{ url_for('static', filename='images/artsy_logo.svg') }}" 
+                class="brand-logo" 
+                alt="Artsy logo">
+            <span class="credit-text">Artsy</span>
+        </a>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
