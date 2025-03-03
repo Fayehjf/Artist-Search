@@ -1,6 +1,7 @@
 # Artist Search
 
 Server-side Scripting using Python, Flask, JSON, AJAX, and Artsy API.
+
 Final front-end layout: https://myfirstpython-9898.wl.r.appspot.com
 
 ## Overview
